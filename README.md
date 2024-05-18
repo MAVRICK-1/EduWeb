@@ -52,3 +52,14 @@ If you want to contact with me you can reach me at [Twitter](https://www.twitter
 ### License
 
 This project is **free to use** and does not contains any license.
+
+ 
+<h2 align = "center">Our Contributors ❤️</h2>
+<div align = "center">
+ <h3>Thank you for contributing to our repository</h3>
+
+![Contributors](https://contrib.rocks/image?repo=MAVRICK-1/EduWeb)
+
+
+</div>
+
