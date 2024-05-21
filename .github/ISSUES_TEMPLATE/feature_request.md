@@ -1,22 +1,20 @@
 ---
-name: 📝 Documentation
-about: Propose changes and improvements to JobLane Docs.
-title: '📝[Docs]: '
+name: 💡 Feature Request
+about: Suggest an interesting feature idea for this project
+title: '💡[FEATURE]: '
 labels: 'enhancement'
 assignees: ''
+
 ---
 
-**What Docs changes are you proposing?**
-Provide a clear description of the changes you're proposing for the documentation. Are you suggesting corrections, clarifications, additions, or updates?
-
-**Why do the Docs need this improvement? What is the motivation for this change? How will this change benefit the community?**
-Explain the motivation behind the proposed changes and how they will benefit the community or users of the documentation.
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
 **Describe the solution you'd like**
-Provide a clear and concise description of the changes you'd like to see implemented in the documentation.
+A clear and concise description of what you want to happen.
 
 **Describe alternatives you've considered**
-If you've thought about alternative approaches or solutions, briefly describe them here.
+A clear and concise description of any alternative solutions or features you've considered.
 
 **Additional context**
-Add any additional context, examples, or screenshots related to the proposed documentation changes.
+Add any other context or screenshots about the feature request here.
