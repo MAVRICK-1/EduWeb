@@ -61,3 +61,38 @@ const activeElem = function () {
 }
 
 addEventOnElem(window, "scroll", activeElem);
+
+
+
+/**
+ * contact form
+ */
+
+const contactForm = document.querySelector("[contact-form]");
+
+const onContactFormSubmit = function (event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const message = formData.get("message");
+
+  function sendEmail() {
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "sender@email_address.com",
+      Password: "Enter your password",
+      To: 'receiver@email_address.com',
+      From: "sender@email_address.com",
+      Subject: "Inquiry",
+      Body: `${message}, from ${name}(${email})`,
+    })
+    .then(function (message) {
+        alert("Mail sent successfully");
+    });
+  }
+
+  sendEmail()
+}
+
+contactForm.addEventListener("submit", onContactFormSubmit);

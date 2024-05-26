@@ -850,6 +850,71 @@ body {
 
 
 /*-----------------------------------*\
+  #CONTACT
+\*-----------------------------------*/
+
+.contact {
+  padding-block-start: 0;
+  overflow: hidden;
+}
+
+.contact .container {
+  display: grid;
+  gap: 30px;
+}
+
+.contact-banner {
+  position: relative;
+  z-index: 1;
+}
+
+.contact :is(.section-subtitle, .section-title, .section-text) {
+  text-align: left;
+}
+
+.contact .contact-form .input-field {
+  background-color: var(--white);
+  padding: 12px;
+  border: 0;
+  border-radius: var(--radius-5);
+  margin-block-end: 20px;
+  font-size: var(--fs-5);
+  font: inherit;
+}
+
+.contact .contact-form .textarea-field {
+    background-color: var(--white);
+    padding: 12px;
+    border: 0;
+    border-radius: var(--radius-5);
+    margin-block-end: 20px;
+    width: 100%;
+    height: 100px;
+    font-size: var(--fs-5);
+    font: inherit;
+}
+  
+.contact-banner {
+  animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% { transform: translateY(0); }
+
+  40% { transform: translateY(-30px); }
+
+  60% { transform: translateY(-15px); }
+}
+
+
+
+
+
+/*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
@@ -1141,6 +1206,19 @@ body {
 
 
   /**
+   * CONTACT
+   */
+
+   .contact { padding-block-start: 50px; }
+
+   .contact-banner {
+     padding: 60px;
+     padding-inline-end: 0;
+   }
+   
+
+
+  /**
    * FOOTER
    */
 
@@ -1230,6 +1308,19 @@ body {
 
 
   /**
+   * CONTACT
+   */
+
+   .contact .container {
+    grid-template-columns: 1fr 0.6fr;
+    align-items: center;
+    gap: 60px;
+  }
+
+
+
+
+  /**
    * FOOTER
    */
 
@@ -1278,6 +1369,7 @@ body {
   .shape { display: block; }
 
   .about-content,
+  .contact-content,
   .video-card,
   .blog { position: relative; }
 
@@ -1386,4 +1478,11 @@ body {
     left: 0;
   }
 
+
+
+  /**
+   * CONTACT
+   */
+
+   .contact .container { gap: 110px; }
 }

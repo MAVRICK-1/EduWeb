@@ -770,10 +770,9 @@
       -->
 
         <section
-          class="section blog has-bg-image"
+          class="section blog"
           id="blog"
           aria-label="blog"
-          style="background-image: url('./assets/images/blog-bg.svg')"
         >
           <div class="container">
             <p class="section-subtitle">Latest Articles</p>
@@ -972,6 +971,59 @@
             />
           </div>
         </section>
+
+
+        <!-- 
+        - #CONTACT
+      -->
+
+      <section class="section contact has-bg-image" id="contact" aria-label="contact" 
+      style="background-image: url('./assets/images/blog-bg.svg')">
+        <div class="container">
+          <figure class="contact-banner">
+            <img
+                src="./assets/images/contact.svg"
+                width="550"
+                height="170"
+                alt="Contact Image"
+              />
+          </figure>
+
+          <div class="contact-content">
+            <form class="contact-form" contact-form>
+              <h2 class="h2 section-title">
+                Talk to Us
+              </h2>
+          
+                <!-- Name -->
+                <div class="name-block">
+                  <label for="formName" class="d-block">
+                    <i class="icon" data-feather="user"></i>
+                  </label>
+                  <input type="text" id="formName" name="name" class="input-field" placeholder="Name" required>
+                </div>
+          
+                <!-- E-mail -->
+                <div class="email-block">
+                  <label for="formEmail" class="d-block">
+                    <i class="icon" data-feather="mail"></i>
+                  </label>
+                  <input type="email" id="formEmail" name="email" class="input-field" placeholder="E-mail" required>
+                </div>
+          
+                <!-- Message -->
+                <div class="message-block">
+                  <textarea id="formMessage" class="textarea-field" name="message" placeholder="Message" required></textarea>
+                </div>
+              
+                <!-- Submit btn -->
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </section>
       </article>
     </main>
 
@@ -1176,6 +1228,7 @@
     <!-- 
     - custom js link
   -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./assets/js/script.js" defer></script>
 
     <!-- 
