@@ -77,22 +77,26 @@ const onContactFormSubmit = function (event) {
   const email = formData.get("email");
   const message = formData.get("message");
 
-  function sendEmail() {
-    Email.send({
-      Host: "smtp.gmail.com",
-      Username: "sender@email_address.com",
-      Password: "Enter your password",
-      To: 'receiver@email_address.com',
-      From: "sender@email_address.com",
-      Subject: "Inquiry",
-      Body: `${message}, from ${name}(${email})`,
-    })
-    .then(function (message) {
-        alert("Mail sent successfully");
-    });
-  }
+  var data = {
+    service_id: 'YOUR_SERVICE_ID',
+    template_id: 'YOUR_TEMPLATE_ID',
+    user_id: 'YOUR_PUBLIC_KEY',
+    template_params: {
+      'name': name,
+      'email': email,
+      'message': message
+    }
+  };
 
-  sendEmail()
+  $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+    type: 'POST',
+    data: JSON.stringify(data),
+    contentType: 'application/json'
+  }).done(function () {
+    alert('Your mail is sent!');
+  }).fail(function (error) {
+    alert('Oops... ' + JSON.stringify(error));
+  });
 }
 
 contactForm.addEventListener("submit", onContactFormSubmit);
