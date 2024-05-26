@@ -1392,6 +1392,8 @@ body {
 
   .contact-banner {
     padding: 60px;
+    max-width: max-content;
+    margin-inline: auto;
     padding-inline-end: 0;
   }
 
@@ -1710,5 +1712,9 @@ body {
 
   .contact .container {
     gap: 110px;
+  }
+
+  .content-banner {
+    margin-inline: 0;
   }
 }
