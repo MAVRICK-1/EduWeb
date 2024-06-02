@@ -26,7 +26,24 @@ const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
 const overlay = document.querySelector("[data-overlay]");
+let slideSearch = document.querySelector(".me-2");
+let slideCross= document.querySelector(".cross");
+let searchIcon= document.querySelector(".header-action-btn");
 
+slideSearch.style.display='none'
+slideCross.style.display='none'
+function showBar() {
+  slideSearch.style.display = "block";
+  slideCross.style.display='inline-block'
+  searchIcon.style.display='none'
+
+  
+}
+function removeSearchBar() {
+  slideSearch.style.display = "none";
+  slideCross.style.display='none'
+  searchIcon.style.display='inline-block'
+}
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");

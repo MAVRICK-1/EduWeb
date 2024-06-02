@@ -925,6 +925,9 @@ body {
 .blog-card .card-subtitle {
   text-transform: uppercase;
 }
+.me-2{
+  border:1px solid black;
+}
 
 .blog-card .card-title {
   margin-block: 10px 15px;
@@ -1717,4 +1720,19 @@ body {
   .content-banner {
     margin-inline: 0;
   }
+}
+.x-input {
+  display: flex;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.x-input input.me-2 {
+  border: 0;
+  outline: 0;
+}
+.cross{
+  width: 10%;
+  margin-right: 2%;
+  cursor: pointer;
 }
