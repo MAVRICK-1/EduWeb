@@ -58,29 +58,89 @@ section span:hover {
 
 .container {
   position: relative; /* Changed to relative for pseudo-element positioning */
-  max-width: 380px;
-  width: 100%;
-  padding: 25px;
-  border-radius: 8px;
+  width: 380px;
+  height: 680px;
+  padding: 40px;
+  border-radius: 6px;
+  
   background: #222;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
-  z-index: 100;
+  z-index: 2;
+  overflow: hidden;
 }
 
+.container form {
+  position: absolute;
+  inset: 4px;
+  background :black ;
+  padding: 20px 40px;
+  border-radius: 4px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
 .container::before {
   content: '';
   position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 580px;
   border-radius: 8px;
-  background: linear-gradient(45deg, hsl(170, 75%, 41%), transparent);
-  z-index: -1;
-  animation: rotate-border 3s linear infinite;
+  background: linear-gradient(0deg, transparent, transparent, hsl(170, 75%, 41%), hsl(170, 75%, 41%), hsl(170, 75%, 41%));
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.container::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 580px;
+  border-radius: 8px;
+  background: linear-gradient(0deg, transparent, transparent, hsl(170, 75%, 41%), hsl(170, 75%, 41%), hsl(170, 75%, 41%));
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+.borderline {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+.borderline::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 580px;
+  border-radius: 8px;
+  background: linear-gradient(0deg, transparent, transparent, hsl(167, 16%, 89%), hsl(167, 16%, 89%), hsl(167, 16%, 89%));
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+.borderline::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 580px;
+  border-radius: 8px;
+  background: linear-gradient(0deg, transparent, transparent, hsl(167, 16%, 89%), hsl(167, 16%, 89%), hsl(167, 16%, 89%));
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
 }
 
-@keyframes rotate-border {
+@keyframes animate {
   0% {
     transform: rotate(0deg);
   }
@@ -92,12 +152,12 @@ section span:hover {
 .container header {
   font-size: 30px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   color: hsl(170, 75%, 41%);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.container form {
-  margin-top: 30px;
-}
+
 form .field {
   margin-bottom: 20px;
 }
