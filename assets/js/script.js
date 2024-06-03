@@ -98,3 +98,6 @@ const onContactFormSubmit = function (event) {
 }
 
 contactForm.addEventListener("submit", onContactFormSubmit);
+
+addEventOnElem(window, "scroll", activeElem);
+
