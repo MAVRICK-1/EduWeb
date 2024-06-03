@@ -222,8 +222,10 @@ body {
 }
 
 .btn {
-  background-color: var(--kappel);
+  background: none;
+  border: 2px solid #000;
   color: var(--white);
+  color: black;
   font-family: var(--ff-league_spartan);
   font-size: var(--fs-4);
   display: flex;
@@ -252,12 +254,14 @@ body {
   background-image: var(--gradient);
   z-index: -1;
   border-radius: inherit;
-  transform: translateX(-100%);
+  transform: scaleY(0);
   transition: var(--transition-2);
 }
 
-.btn:is(:hover, :focus)::before { transform: translateX(0); }
-
+.btn:is(:hover, :focus)::before { transform: scaleY(1); }
+.btn:hover{
+  color: white;
+}
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-gray);
