@@ -61,3 +61,43 @@ const activeElem = function () {
 }
 
 addEventOnElem(window, "scroll", activeElem);
+
+/**
+ * contact form
+ */
+
+const contactForm = document.querySelector("[contact-form]");
+
+const onContactFormSubmit = function (event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const message = formData.get("message");
+
+  var data = {
+    service_id: 'YOUR_SERVICE_ID',
+    template_id: 'YOUR_TEMPLATE_ID',
+    user_id: 'YOUR_PUBLIC_KEY',
+    template_params: {
+      'name': name,
+      'email': email,
+      'message': message
+    }
+  };
+
+  $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+    type: 'POST',
+    data: JSON.stringify(data),
+    contentType: 'application/json'
+  }).done(function () {
+    alert('Your mail is sent!');
+  }).fail(function (error) {
+    alert('Oops... ' + JSON.stringify(error));
+  });
+}
+
+contactForm.addEventListener("submit", onContactFormSubmit);
+
+addEventOnElem(window, "scroll", activeElem);
+
