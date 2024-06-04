@@ -29,9 +29,21 @@ Before you begin, ensure you have met the following requirements:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
-### Run Locally
+### Set up and Run Locally
 
-To run **EduWeb** locally, run this command on your git bash:
+Follow thse steps to set up and run **EduWeb** locally:
+
+** 1. Fork this repository **
+- Click the `Fork` button at the top-right corner of this repository page. This will create a copy of this repository on your github account. 
+
+** 2. Clone the copy of the project in your local system **
+- Following are the steps to clone the repo in your local system: 
+
+1. Navigate to the main page of the forked repository on your github account. 
+2. click on <> Code.
+3. Copy the URL of the repository. 
+4. Open git bash and change the current working directory to the location where you want the cloned directory by command ```bash cd <Directory_name> .
+5. Clone the repository by using the following commands: 
 
 Linux and macOS:
 
@@ -44,6 +56,40 @@ Windows:
 ```bash
 git clone https://github.com/codewithsadee/eduweb.git
 ```
+
+### Create new branch 
+
+1. Check the remotes for the Repository. 
+2. Create a new branch using the command: 
+
+```bash
+git checkout -b <your_branch_name>
+
+```
+
+Now you are all set to perform the desired changes to the codebase.
+
+### Track and Commit changes 
+
+1. After you have made your changes, track them by the command: 
+
+```bash
+git add .
+```
+2. Commit your changes with a relevant commit message.
+
+```bash
+git commit -m "Message"
+```
+3. Push the committed changes in your feature branch to your remote repo.
+
+```bash
+git push -u origin <your_branch_name>
+``` 
+
+### Making a PR 
+
+-To create a pull request, go to your forked repository on GitHub and click on Compare & pull request.
 
 ### Contact
 
