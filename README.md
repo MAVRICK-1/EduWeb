@@ -33,16 +33,16 @@ Before you begin, ensure you have met the following requirements:
 
 Follow thse steps to set up and run **EduWeb** locally:
 
-** 1. Fork this repository **
+ 1. Fork this repository 
 - Click the `Fork` button at the top-right corner of this repository page. This will create a copy of this repository on your github account. 
 
-** 2. Clone the copy of the project in your local system **
+ 2. Clone the copy of the project in your local system 
 - Following are the steps to clone the repo in your local system: 
 
 1. Navigate to the main page of the forked repository on your github account. 
 2. click on <> Code.
 3. Copy the URL of the repository. 
-4. Open git bash and change the current working directory to the location where you want the cloned directory by command ```bash cd <Directory_name> .
+4. Open git bash and change the current working directory to the location where you want the cloned directory by command ```bash cd <Directory_name> ```.
 5. Clone the repository by using the following commands: 
 
 Linux and macOS:
