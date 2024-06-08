@@ -908,10 +908,16 @@ body {
 
 .social-list {
   display: flex;
-  gap: 25px;
+  gap: 22px;
 }
 
-.social-link { font-size: 20px; }
+.social-link {
+  font-size: 25px;
+}
+
+.social-link:hover{
+  transform: scale(1.5);
+}
 
 .footer-bottom {
   border-block-start: 1px solid var(--eerie-black-1);
