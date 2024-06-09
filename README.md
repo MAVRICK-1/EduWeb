@@ -31,7 +31,7 @@ Before you begin, ensure you have met the following requirements:
 
 ### Set up and Run Locally
 
-Follow thse steps to set up and run **EduWeb** locally:
+Follow these steps to set up and run **EduWeb** locally:
 
  1. Fork this repository 
 - Click the `Fork` button at the top-right corner of this repository page. This will create a copy of this repository on your github account. 
