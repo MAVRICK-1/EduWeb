@@ -79,8 +79,6 @@ const activeElem = function () {
 
 addEventOnElem(window, "scroll", activeElem);
 
-
-
 /**
  * contact form
  */
@@ -117,3 +115,6 @@ const onContactFormSubmit = function (event) {
 }
 
 contactForm.addEventListener("submit", onContactFormSubmit);
+
+addEventOnElem(window, "scroll", activeElem);
+
