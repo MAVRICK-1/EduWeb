@@ -97,8 +97,15 @@
       </nav>
 
       <div class="header-actions">
+        <form>
+        <span class="x-input">
+          <input type="text" class="me-2" />
+          <input type="reset" value=" X " class="cross" onclick="removeSearchBar()" />
+      </span>
+      </form>
+        <button class="header-action-btn" aria-label="toggle search" onclick="showBar()" title="Search">
 
-        <button class="header-action-btn" aria-label="toggle search" title="Search">
+       
           <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
         </button>
 
