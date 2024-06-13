@@ -294,6 +294,18 @@ body {
   gap: 30px;
 }
 
+.grid-list li{
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.grid-list li :hover{
+  transform: scale(1.1);
+}
+
+.category-card h3 :hover{
+  color: #2ecc71;
+}
+
 .category-card,
 .stats-card { background-color: hsla(var(--color), 0.1); }
 
