@@ -320,6 +320,7 @@ body {
   z-index: 4;
 }
 
+
 .header.active { position: fixed; }
 
 .header .container,
@@ -388,12 +389,11 @@ body {
   color: var(--white);
 }
 
-.navbar-list { padding: 15px 20px; }
+.navbar-list { padding: 15px 20px;}
 
 .navbar-item:not(:last-child) { border-block-end: 1px solid var(--platinum); }
 
 .navbar-link {
-  padding-block: 8px;
   font-weight: var(--fw-500);
   transition: var(--transition-1);
 }
@@ -415,8 +415,9 @@ body {
   pointer-events: all;
 }
 
-
-
+.navbar-item {
+  display: flex;
+}
 
 
 /*-----------------------------------*\
@@ -1310,7 +1311,7 @@ body {
 
   .navbar-list {
     display: flex;
-    gap: 50px;
+    gap: 45px;
     padding: 0;
   }
 
@@ -1318,7 +1319,7 @@ body {
 
   .navbar-link {
     color: var(--eerie-black-1);
-    padding-block: 20px;
+    padding-left: 7px;
   }
 
   .header .btn { margin-inline-end: 0; }
