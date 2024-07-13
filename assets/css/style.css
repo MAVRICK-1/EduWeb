@@ -1533,10 +1533,12 @@ body {
 
 .testimonials-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1400px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
+  
 
 }
 .testimonials-item {
@@ -1545,6 +1547,8 @@ body {
   border-radius: 10px;
   margin: 10px;
   padding: 20px;
+  min-width: 200px;
+  border: 3px solid white;
 }
 
 
@@ -1568,6 +1572,7 @@ body {
 
 .post {
   font-size: 14px;
+  color: #ff355e;
 }
 
 .row {
